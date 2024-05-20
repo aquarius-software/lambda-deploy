@@ -1,8 +1,23 @@
 # lambda-deploy
 
-Serverless FrameworkのアプリをAWS Lambdaにデプロイするための環境を作成します。以下のコマンドを実行すると、Amazon Linuxに必要なソフトウェアがインストールされたDockerイメージが作成されます。
+Serverless FrameworkのアプリをAWS LambdaにデプロイするためのDockerイメージを作成します。
+
+## 環境
+- Amazon Linux
+- Node.js 20
+
+## インストールされるパッケージ
+- git
+- glibc-common
+- glibc
+- gcc-c++
+- make
+- vim-enhanced
+- nodejs
 
 ## 実行方法
-```docker-compose up --build```
+以下のコマンドを実行すると、Amazon Linuxに必要なソフトウェアがインストールされたDockerイメージが作成されます。
+
+`docker-compose up --build`
 
 
