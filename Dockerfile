@@ -12,7 +12,7 @@ RUN yum update -y && \
     yum clean all
 
 # Serverless Frameworkをグローバルにインストール
-RUN npm install -g serverless
+RUN npm install -g serverless@3.38.0
 
 # 作業ディレクトリを設定
 WORKDIR /app
