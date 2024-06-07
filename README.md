@@ -1,6 +1,9 @@
-# lambda-deploy
+# lambda-deploy-mac
 
-Serverless FrameworkのアプリをAWS LambdaにデプロイするためのDockerイメージを作成します。
+Serverless FrameworkのプロジェクトをLambdaにデプロイするための、Dockerイメージを生成します。想定しているローカル環境は、macOS（ARM）で、Dockerイメージの環境はAmazon Linuxです。
+
+## 背景
+macOS（ARM）環境からLambdaにServerless Frameworkプロジェクトのデプロイを試みましたが、invalid ELF Headerエラーが発生し、デプロイに失敗してしまいます。invalid ELF Headerエラーというのは、端的に述べるとOS環境の違いに起因するエラーです。そのため、macOS環境からLambdaにデプロイするためのLinux環境を作成する必要に迫られました。
 
 ## 環境
 - Amazon Linux
@@ -16,7 +19,7 @@ Serverless FrameworkのアプリをAWS LambdaにデプロイするためのDocke
 - nodejs
 
 ## 実行方法
-以下のコマンドを実行すると、Amazon Linuxに必要なソフトウェアがインストールされたDockerイメージが作成されます。
+ターミナルで以下のコマンドを実行すると、Amazon Linuxに必要なソフトウェアがインストールされたDockerイメージが作成されます。
 
 `docker-compose up --build`
 
